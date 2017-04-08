@@ -9,6 +9,9 @@ Router.map(function() {
   this.route('seasons', function() {
     this.route('show', { path:'/season/:year'});
   });
+  this.route('constructors', function() {
+    this.route('show');
+  });
 });
 
 export default Router;
