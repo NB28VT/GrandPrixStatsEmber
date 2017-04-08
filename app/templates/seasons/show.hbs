@@ -1,2 +1,9 @@
-<h1>I'm the season for {{model}}!</h1>
+
+<ul>
+  {{#each model as |driver|}}
+    <li>{{driver.Driver.givenName}}{{driver.Driver.familyName}}</li>
+  {{/each}}
+</ul>
+
+
 {{outlet}}
