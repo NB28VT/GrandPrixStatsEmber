@@ -1,9 +1,26 @@
-
-<ul>
-  {{#each model as |driver|}}
-    <li>{{driver.Driver.givenName}}{{driver.Driver.familyName}}</li>
-  {{/each}}
-</ul>
-
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Position</th>
+      <th>Name</th>
+      <th>Nationality</th>
+      <th>Wins</th>
+      <th>Constructor</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each model as |driver|}}
+        <tr>
+          <th scope="row">{{driver.position}}</th>
+          <td>{{driver.Driver.givenName}} {{driver.Driver.familyName}}</td>
+          <td>{{driver.Driver.nationality}}</td>
+          <td>{{driver.wins}}</td>
+          <td>{{driver.Constructors.first.name}}</td>
+          <td>{{driver.points}}</td>
+        </tr>
+      {{/each}}
+  </tbody>
+</table>
 
 {{outlet}}
